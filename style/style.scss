@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем стрелочки в input */
+/* Chrome */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[type='number']:hover,
+input[type='number']:focus {
+  -moz-appearance: number-input;
+}
+/* Другие */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background-color: #000a1d;
+  color: #37bdff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+input,
+select {
+  padding: 7px 15px;
+  background-color: #002d43;
+  border: 1px solid #00abff;
+  color: #00abff;
+  font-family: 'Roboto Mono', monospace;
+  box-sizing: border-box;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: (0px 0px 10px transparent);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  &:hover {
+    box-shadow: (0px 0px 10px #00abff);
+    text-shadow: (0px 0px 10px #00abff);
+  }
+  &:focus {
+    box-shadow: (0px 0px 10px #00abff);
+    text-shadow: (0px 0px 10px #00abff);
+  }
+}
+
+button {
+  padding: 7px 15px;
+  background-color: #550b1b;
+  border: 1px solid #ffb1b1;
+  color: #ffb1b1;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: (0px 0px 10px transparent);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: (0px 0px 10px #ff7373);
+    text-shadow: (0px 0px 10px #ff7373);
+  }
+}
+
+.game {
+  &__menu {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__record {
+    font-size: 25px;
+    text-shadow: (0px 0px 10px #00abff);
+  }
+  &__form {
+    margin: 40px 0;
+  }
+  &__set {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+  &__label {
+    margin-bottom: 5px;
+    text-shadow: (0px 0px 10px #00abff);
+  }
+  &__start {
+    width: 100%;
+  }
+  &__field-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__counter {
+    font-size: 35px;
+  }
+  &__field {
+    height: 80vh;
+    position: relative;
+  }
+  &__el {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+  }
+}
+
+.hidden {
+  display: none;
+}

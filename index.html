@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reflex Training Game</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+	<div class="game">
+		<div class="game__container container">
+
+			<section class="game__menu">
+				<h2 class="game__record">last result:
+					<span id="last-result" class="game__count">0</span>
+				</h2>
+
+				<form class="game__form">
+
+					<div class="game__settigs">
+						<div class="game__set">
+							<label class="game__label" for="time">
+								time
+							</label>
+							<input type="number" value="10" id="time">
+						</div>
+
+						<div class="game__set">
+							<label class="game__label" for="time">
+								difficulty
+							</label>
+							<select id="difficulty">
+								<option value="1">ease</option>
+								<option value="2">medium</option>
+								<option value="3">hard</option>
+							</select>
+						</div>
+
+					</div>
+
+
+					<button type="button" id='startGame' class="game__start">play</button>
+
+				</form>
+
+				<h2 class="game__record">best result:
+					<span id="best-result" class="game__count">0</span>
+
+				</h2>
+			</section>
+
+			<section class="game__field-wrapper hidden">
+				<div class="game__field-menu">
+					<h2 class="game__record">time:
+						<span id="timeleft" class="game__time"></span>
+					</h2>
+					<span class="game__counter">0</span>
+					<button class="game__stop">stop</button>
+				</div>
+
+				<div class="game__field"></div>
+
+			</section>
+
+
+
+		</div>
+	</div>
+
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
